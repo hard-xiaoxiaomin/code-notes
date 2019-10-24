@@ -1,0 +1,12 @@
+@import './_mixin.scss';
+@import './_resetMobile';
+
+.iconfont {
+    @include iconfont;
+}
+.hidden {
+    display: none !important;
+}
+body {
+    color: #333;
+}
