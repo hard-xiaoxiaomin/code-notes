@@ -1,0 +1,36 @@
+@import './_mixin.scss';
+@import './_resetMobile';
+
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#box {
+    width: 50px;
+    height: 50px;
+    background: pink;
+    position: absolute;
+    
+}
+
+
+
+//写移动拖拽的思路
+/*
+html:
+
+1.先将要拖拽的div写出来  <div id="div"></div>
+
+js.
+
+1.获取div并且取变量名为box
+
+
+
+2.获取最初拖拽的位置  ()
+
+
+
+*/

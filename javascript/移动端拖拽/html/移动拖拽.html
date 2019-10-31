@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="google" value="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>移动端拖拽</title>
+    <link href="../widget/iconfont/iconfont.css" rel="stylesheet">
+    <link href="../css/allPage.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="box"></div>
+    
+    <script>
+        var box = document.getElementById('box');
+        var distenceL = 0;
+        var distanceH = 0;
+        
+        box.ontouchstart = function (e) {
+
+            distenceL = e.touches[0].clientX - box.offsetLeft;
+            distanceH = e.touches[0].clientY - box.offsetTop;
+
+            document.ontouchmove = function (e) {
+
+                box.style.left = e.touches[0].clientX - distenceL + 'px';
+                box.style.top = e.touches[0].clientY - distanceH + 'px';
+            }
+        }
+
+        box.ontouchend = function () {
+
+            box.ontouchmove = null;
+        }
+    </script>
+
+</body>
+
+</html>
