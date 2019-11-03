@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>区分width的作用</title>
+    <style>
+        .box1 {
+            display: flex;
+        }
+
+        .box1 .box1-item {
+            flex-grow: 1;
+            border: 1px solid #ccc;
+            margin-left: .1rem;
+        }
+
+        .box2 {
+            display: flex;
+        }
+
+        .box2 .box2-item {
+            margin-top: 20px;
+            width: 0;
+            flex-grow: 1;
+            border: 1px solid #ccc;
+            margin-left: .1rem;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box1-item">我是我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素子元素</div> 
+        <div class="box1-item">我是子元素我是子元素</div> 
+        <div class="box1-item">我是子元素我是子元素我是子元素</div> 
+        <div class="box1-item">我是子元素我是子元素我是子元素我是子元素</div> 
+        <div class="box1-item">我是子元素我是子元素我是子元素我是子元素我是子元素</div>
+    </div>
+
+    <div class="box2">
+            <div class="box2-item">我是我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素我是子元素子元素</div> 
+            <div class="box2-item">我是子元素我是子元素</div> 
+            <div class="box2-item">我是子元素我是子元素我是子元素</div> 
+            <div class="box2-item">我是子元素我是子元素我是子元素我是子元素</div> 
+            <div class="box2-item">我是子元素我是子元素我是子元素我是子元素我是子元素</div>
+        </div>
+</body>
+</html>

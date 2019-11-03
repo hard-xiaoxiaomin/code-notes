@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex布局做到等分</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding:200px;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .list-wrap {
+            margin-left: -10px;
+            display: flex;
+            width: 500px;
+            height: 100%;
+            border: 1px solid red;
+            
+        }
+
+        .list-item {
+            padding-left: 10px;
+            width: 0;
+            flex-grow: 1;
+        }
+
+        .item-main {
+            width: 100%;
+            height: 100%;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list-wrap">
+        <div class="list-item">
+            <div class="item-main"></div>
+        </div>
+
+        <div class="list-item">
+            <div class="item-main"></div>
+        </div>
+
+        <div class="list-item">
+            <div class="item-main"></div>
+        </div>
+    </div>
+</body>
+
+</html>
