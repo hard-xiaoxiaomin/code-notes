@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点击增删</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-wrap {
+            padding: 200px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        table {
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            /*消除边框之间重复*/
+        }
+
+        tr {
+            display: block;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+        }
+
+        td {
+            padding: 0 10px;
+        }
+    </style>
+</head>
+
+<body class="main-wrap">
+    <a class="insert-btn" href="javascript:;" onclick="add()">添加</a>
+    <a class="delete-btn" href="javascript:;" onclick="del()">删除</a>
+
+    <table id="one">
+        <tr>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+        </tr>
+    </table>
+
+    <script>
+        var insertBtn = document.getElementById("one");
+        tr.appendChild(td);
+
+        function add() {
+            var tr = document.createElement("tr");
+            var td = document.createElement("td");
+            insertBtn.appendChild(tr);
+        }
+
+        function del() {
+            insertBtn.removeChild(tr);
+        }
+    </script>
+</body>
+
+</html>
