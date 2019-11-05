@@ -12,8 +12,3 @@
 - [移动拖拽](https://hard-xiaoxiaomin.github.io/code-notes/javascript/移动端拖拽/html/移动拖拽.html)
 - [点击增删](https://hard-xiaoxiaomin.github.io/code-notes/javascript/点击增删.html)
 
-
-
-## 移动端模板
-
-- [移动模板](https://hard-xiaoxiaomin.github.io/code-notes/mobile-template/html/template.html)
