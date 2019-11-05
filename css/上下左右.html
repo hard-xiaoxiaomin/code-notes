@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上下左右进入</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            color: #333;
+        }
+
+        .top,
+        .bottom {
+            left: 50%;
+            margin-left: -50px;
+        }
+
+        .right,
+        .left {
+            top: 50%;
+            margin-top: -50px;
+        }
+
+        .top {
+            top: 0;
+            background: #999;
+            animation: movetop 1s linear 0s normal forwards;
+        }
+
+        .bottom {
+            bottom: 0;
+            background: pink;
+            animation: movebottom 1s linear 1s normal forwards;
+        }
+
+        .left {
+            top: 50%;
+            background: #ccc;
+            animation: moveleft 1s linear 2s normal forwards;
+        }
+
+        .right {
+            right: 0;
+            background: #f3f3f3;
+            animation: moveright 1s linear 3s normal forwards;
+        }
+
+        @keyframes movetop {
+            0% {
+                top: 0;
+            }
+
+
+            100% {
+                top: 30%;
+            }
+        }
+
+        @keyframes movebottom {
+            0% {
+                bottom: 0;
+            }
+
+
+            100% {
+                bottom: 30%;
+            }
+        }
+
+        @keyframes moveleft {
+            0% {
+                left: 0;
+            }
+
+
+            100% {
+                left: 40%;
+            }
+        }
+
+        @keyframes moveright {
+            0% {
+                right: 0;
+            }
+
+
+            100% {
+                right: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box top">上面</div>
+
+    <div class="box bottom">下面</div>
+
+    <div class="box left">左边</div>
+
+    <div class="box right">右边</div>
+</body>
+
+</html>
