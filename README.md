@@ -4,6 +4,7 @@
 - [居中](https://hard-xiaoxiaomin.github.io/code-notes/css/居中/欢迎首页.html)
 - [flex布局width](https://hard-xiaoxiaomin.github.io/code-notes/css/flex布局width.html)
 - [等分](https://hard-xiaoxiaomin.github.io/code-notes/css/等分.html)
+- [等分](https://hard-xiaoxiaomin.github.io/code-notes/css/上下左右.html)
 
 
 ## javascript
