@@ -15,4 +15,4 @@
 
 ## 移动端模板
 
-- [移动拖拽](https://hard-xiaoxiaomin.github.io/code-notes/mobile-template/html/template.html)
+- [移动模板](https://hard-xiaoxiaomin.github.io/code-notes/mobile-template/html/template.html)
