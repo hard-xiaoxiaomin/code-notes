@@ -21,11 +21,13 @@
         table {
             resize:none;
             border: 1px solid #ccc;
+            border-collapse: collapse;
+            text-align: center;
         }
 
         .insertbtn {
             margin-bottom:10px;
-            padding: 10px 5px;
+            padding: 10px 20px;
             background: #ccc;
             border: none;
             border-radius:3px;
@@ -40,7 +42,7 @@
         }
 
         td {
-            padding: 5px 10px;
+            padding: 10px 20px;
         }
 
     </style>
@@ -48,17 +50,15 @@
 
 <body>
     <button class="insertbtn" onclick="addtr()">添加</button>
-
+    <button class="insertbtn" onclick="delecttr()">删除</button>
     <table id="tab1">
         <tr>
             <td>用户编号</td>
             <td>用户姓名</td>
-            <td>操作</td>
         </tr>
         <tr>
             <td>1</td>
             <td>小明1</td>
-            <td><input type="button" value="删除" onclick="delecttr(this)"></td>
         </tr>
     </table>
 
@@ -67,22 +67,20 @@
             var tab1 = document.getElementById("tab1");
             var tr1 = document.createElement("tr");
 
-            for (var i = 0; i < 2; i++) {
+            for (var i = 0; i < 1; i++) {
                 var td1 = document.createElement("td");
                 td1.innerHTML = "1";
                 tr1.appendChild(td1);
             }
-            var td1 = document.createElement("td");
 
-            td1.innerHTML = "<button onclick=delecttr(this)>删除 </button>";
+            var td1 = document.createElement("td");
 
             tr1.appendChild(td1);
             tab1.appendChild(tr1);
         }
 
-        function delecttr(obj) {
-            var tr1 = obj.parentNode.parentNode;
-            tr1.parentNode.removeChild(tr1);
+        function delecttr() {
+            tab1.deleteRow(1);
         }
     </script>
 </body>
