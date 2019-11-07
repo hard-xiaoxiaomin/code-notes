@@ -19,32 +19,33 @@
         }
 
         table {
-            resize:none;
+            resize: none;
             border: 1px solid #ccc;
             border-collapse: collapse;
             text-align: center;
         }
 
         .insertbtn {
-            margin-bottom:10px;
+            margin-bottom: 10px;
             padding: 10px 20px;
             background: #ccc;
             border: none;
-            border-radius:3px;
+            border-radius: 3px;
             outline: none;
         }
+
         .insertbtn:active {
             opacity: .8;
         }
 
-        tr, td {
+        tr,
+        td {
             border: 1px solid #ccc;
         }
 
         td {
             padding: 10px 20px;
         }
-
     </style>
 </head>
 
@@ -57,25 +58,30 @@
             <td>用户姓名</td>
         </tr>
         <tr>
-            <td>1</td>
-            <td>小明1</td>
+            <td id="item">1</td>
+            <td id="item-name">小明</td>
         </tr>
     </table>
 
     <script>
+        var i = 2;
+
         function addtr() {
             var tab1 = document.getElementById("tab1");
-            var tr1 = document.createElement("tr");
-
-            for (var i = 0; i < 1; i++) {
-                var td1 = document.createElement("td");
-                td1.innerHTML = "1";
-                tr1.appendChild(td1);
-            }
 
             var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
 
+            var tr1 = document.createElement("tr");
+        
+            var value = document.getElementById("item-name");
+
+            td1.innerHTML = i;
             tr1.appendChild(td1);
+            td2.innerHTML = "小小";
+            tr1.appendChild(td2);
+            i += 1;
+
             tab1.appendChild(tr1);
         }
 
