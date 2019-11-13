@@ -11,6 +11,6 @@
 
 - [移动端拖拽](https://hard-xiaoxiaomin.github.io/code-notes/javascript/移动端拖拽/html/移动拖拽.html)
 - [点击增删](https://hard-xiaoxiaomin.github.io/code-notes/javascript/点击增删/点击增删.html)
-- [导航栏吸附](https://hard-xiaoxiaomin.github.io/code-notes/javascript/javascript/导航栏吸附/html/html.html)
+- [导航栏吸附](https://hard-xiaoxiaomin.github.io/code-notes/javascript/导航栏吸附/html/html.html)
 - [回到顶部](https://hard-xiaoxiaomin.github.io/code-notes/javascript/回到顶部/html/html.html)
 - [定时器学习](https://hard-xiaoxiaomin.github.io/code-notes/javascript/定时器学习/demo1.html)
