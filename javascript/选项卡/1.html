@@ -27,6 +27,10 @@
             border: none;
         }
 
+        .btn:first-child {
+            margin-left: 0;
+        }
+
         .btn.active {
             background: #f3f3f3;
         }
@@ -36,9 +40,8 @@
         }
 
         .btn-boxs .btn-box {
-            width: 300px;
-            height: 100px;
-            line-height: 100px;
+            width: 500px;
+            height: 500px;
             font-size: 50px;
             text-align: center;
             background: #999;
@@ -63,16 +66,16 @@
         </div>
 
         <div class="btn-boxs">
-            <div class="btn-box active">选项1</div>
-            <div class="btn-box">选项2</div>
-            <div class="btn-box">选项3</div>
-            <div class="btn-box">选项4</div>
-            <div class="btn-box">选项0</div>
+            <div class="btn-box active">1</div>
+            <div class="btn-box">2</div>
+            <div class="btn-box">3</div>
+            <div class="btn-box">4</div>
+            <div class="btn-box">5</div>
         </div>
     </div>
     <script>
         var btns = document.querySelectorAll('.btns .btn');
-        var divs = document.querySelectorAll('.btn-boxs .btn-box');
+        var boxs = document.querySelectorAll('.btn-boxs .btn-box');
 
         for (let i = 0; i < btns.length; i++) {
 
@@ -82,13 +85,24 @@
 
                     btns[i].classList.remove("active");
 
-                    divs[i].classList.remove("active");
+                    boxs[i].classList.remove("active");
                 }
 
                 this.classList.add("active");
 
-                divs[i].classList.add("active");
+                boxs[i].classList.add("active");
+
+                sessionStorage.setItem("index", i);
             }
+        }
+        
+        const index = sessionStorage.getItem("index");
+
+        if (index && (+index !== 0)) {
+            btns[0].classList.remove("active");
+            boxs[0].classList.remove("active");
+            btns[+index].classList.add("active");
+            boxs[+index].classList.add("active");
         }
     </script>
 </body>
