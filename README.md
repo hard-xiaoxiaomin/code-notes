@@ -14,3 +14,4 @@
 - [导航栏吸附](https://hard-xiaoxiaomin.github.io/code-notes/javascript/导航栏吸附/html/html.html)
 - [回到顶部](https://hard-xiaoxiaomin.github.io/code-notes/javascript/回到顶部/html/html.html)
 - [定时器学习](https://hard-xiaoxiaomin.github.io/code-notes/javascript/定时器学习/demo1.html)
+- [选项卡](https://hard-xiaoxiaomin.github.io/code-notes/javascript/选项卡/1.html)
