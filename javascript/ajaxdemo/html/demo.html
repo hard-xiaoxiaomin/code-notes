@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="../css/style.min.css">
+        <title>ajax</title>
+    </head>
+    <body>
+        <!-- 表格块 开始 -->
+        <div class="tab">
+            <div class="edit-wrap">
+                <a class="btn-load" href="javascript:;">刷新...</a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>身份证号码</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>36042819123530627</td>
+                        <td>小小俊</td>
+                        <td>帅男</td>
+                    </tr>
+                    <tr>
+                        <td>36042855367545221</td>
+                        <td>小小俊</td>
+                        <td>帅男</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- 表格块 结束 -->
+
+        <!-- 脚本引入 开始 -->
+        <script src="../js/jquery.js"></script>
+        <script>
+            $(function(){
+                console.log('脚本载入...');
+
+                // 刷新
+                $('.tab .btn-load').on('click',function(){
+                    console.log('点击测试执行...');
+                    $.ajax({
+                        url:         "../file/data.json",
+                        type:        "get",
+                        dataType:    "json",
+                        beforeSend:  function(){ console.log('发送前'); },
+                        complete:    function(){ console.log('发送中'); },
+                        success:     function( result ){
+                            console.log('成功');
+                            console.log( result );
+
+                            var contentwrap = '';
+                            
+                            for( var i = 0; i < result.length; i++ )
+                            {
+                                contentwrap += '<tr>' +
+                                                '<td>' + result[i].index + '</td>' +
+                                                '<td>' + result[i].name + '</td>' +
+                                                '<td>' + result[i].sex + '</td>' +
+                                            '</tr>';
+                            }
+
+                            $('.tab tbody').html( contentwrap );
+
+                        }
+                    });
+                });
+            });
+        </script>
+        <!-- 脚本引入 结束 -->
+    </body>
+</html>
