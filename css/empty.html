@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>empty的用法</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                padding: 100px;
+            }
+            .box {
+                margin: 0 auto;
+                width: 300px;
+                text-align: center;
+            }
+            .tit {
+                padding: 10px;
+            }
+
+            .tit:empty {
+                background: #f3f3f3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <p class="tit"></p>
+            <p class="tit">这是有内容的p标签</p>
+            <p class="tit">这是有内容的p标签</p>
+            <p class="tit">这是有内容的p标签</p>
+        </div>
+    </body>
+</html>
