@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arguments的练习</title>
+</head>
+
+<body>
+    <script>
+        function printArgs() {
+            console.log(arguments);
+        }
+
+        printArgs("A", "a", 0, {
+            foo: "Hello,arguments"
+        }, 1, 2);
+
+        function func() {
+            console.log("The number of parameters is " + arguments.length);
+        }
+        func();
+        func(1, 2, 3, 4, 5);
+
+        const obj = {
+            0: "a",
+            1: "b",
+            length: 2
+        };
+        const result = [].slice.call(obj);
+        console.log(Array.isArray(result), result);
+
+        function getArgs() {
+            return arguments
+        }
+
+        function foo(a) {
+            "use strict";
+            console.log(a, arguments[0]);
+
+            a = 10;
+            console.log(a, arguments[0]);
+
+            arguments[0] = 20;
+            console.log(a, arguments[0]);
+        }
+        foo(1);
+
+        function Bar() {}
+        
+        Bar.prototype.push = Array.prototype.push;
+
+        const bar = new Bar();
+        bar.push('A');
+        bar.push('B');
+        console.log(bar);
+    </script>
+</body>
+
+</html>
