@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>双击放大</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+            }
+
+            body {
+                padding: 200px 500px;
+            }
+            
+            #item {
+                display: inline-block;
+                padding: 100px 50px;
+                background: #999;
+                text-align: center;
+                transform: all .6s;
+                transform-origin: 0 0;
+                transition: transform .6s;
+            }
+
+            .tit {
+                font-size: 24px;
+                color: #fff;
+            }
+
+            .big {
+                transform: scale(1.3);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="item">
+            <p class="tit">双击可以放大，再次双击恢复原样</p>
+        </div>
+
+        <script>
+            const box = document.getElementById("item");
+
+            box.addEventListener('dbclick', function(e) {
+                box.classList.toggle("big");
+                console.log("dbclick");
+            });
+
+            box.addEventListener('click', function(e) {
+                console.log("click");
+            });
+        </script>
+    </body>
+
+</html>
