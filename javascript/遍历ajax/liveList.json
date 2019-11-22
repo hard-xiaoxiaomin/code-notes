@@ -1,0 +1,57 @@
+{
+    "code": 0,
+    "msg": "success",
+    "nowTime": 1574439166,
+    "data": {
+        "items": [
+            {
+                "userinfoUri": "1508272156cAn6bT",
+                "appraisalStatus": 2,
+                "viewerNum": 92,
+                "username": "胡子哥",
+                "weight": 360,
+                "isMe": 0,
+                "liveCover": "201911220452edaa-92cc-4f05-8745-fab9c793f29f-W1035H540",
+                "liveCoverSmall": "201911224d17c070-7d43-4ec3-9c1b-9c8bea45faee-W390H390",
+                "liveCoverPre": "201911220b62597d-db8a-471a-9afc-263334141e79-W750H630",
+                "liveCoverPreSmall": "",
+                "sortStatus": 99,
+                "preStartTime": 1574416740,
+                "preEndTime": 1574488800,
+                "buttonString": "开播提醒",
+                "preEndTimeString": "",
+                "description": "瓷器",
+                "playUrl": "rtmp://liveplay2.weipaitang.com/live/1508272156cAn6bT",
+                "playUrlH5": "http://liveplay2.weipaitang.com/live/1508272156cAn6bT.m3u8",
+                "playUrlFlv": "http://liveplay2.weipaitang.com/live/1508272156cAn6bT.flv",
+                "accPlayUrl": "rtmp://liveplay2.weipaitang.com/live/1508272156cAn6bT?txSecret=e6fe920d72f25484c060c5ed247169a5&txTime=5dd95a7e&bizid=22484",
+                "appraisalStatusImg": "https://cdn.weipaitang.com/static/2019103001ba1192-5324-4376-a811-5a32e73ee0d0-W174H60",
+                "image": "https://cdn.weipaitang.com/img/201911220452edaa-92cc-4f05-8745-fab9c793f29f-W1035H540/w/640"
+            },
+            {
+                "userinfoUri": "1903301359NaVqxh",
+                "appraisalStatus": 2,
+                "viewerNum": 339,
+                "username": "卢英明",
+                "weight": 339,
+                "isMe": 0,
+                "liveCover": "2019112268205063-003e-4be6-9b57-4b62970bea73-W1035H540",
+                "liveCoverSmall": "201911227b4c9135-9efc-4195-bbe7-853e30dfe2a0-W390H390",
+                "liveCoverPre": "20191122c503dace-98b9-4678-bff3-dd8b13eb4492-W750H630",
+                "liveCoverPreSmall": "",
+                "sortStatus": 99,
+                "preStartTime": 1574417280,
+                "preEndTime": 1574506800,
+                "buttonString": "开播提醒",
+                "preEndTimeString": "",
+                "description": "和田玉",
+                "playUrl": "rtmp://liveplay2.weipaitang.com/live/1903301359NaVqxh",
+                "playUrlH5": "http://liveplay2.weipaitang.com/live/1903301359NaVqxh.m3u8",
+                "playUrlFlv": "http://liveplay2.weipaitang.com/live/1903301359NaVqxh.flv",
+                "accPlayUrl": "rtmp://liveplay2.weipaitang.com/live/1903301359NaVqxh?txSecret=a446de53be9c55d2453d0968ed769ce9&txTime=5dd95a7e&bizid=22484",
+                "appraisalStatusImg": "https://cdn.weipaitang.com/static/20191018b6477189-5fdd-402c-b5d1-54b76272d7c5-W96H40",
+                "image": "https://cdn.weipaitang.com/img/201911227b4c9135-9efc-4195-bbe7-853e30dfe2a0-W390H390/w/640"
+            }
+        ]
+    }
+}

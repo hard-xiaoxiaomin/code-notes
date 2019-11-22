@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>遍历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            padding: 100px;
+        }
+        .ul {
+            margin-top: 10px;
+        }
+
+        li {
+            margin-top: 20px;
+            background: #f3f3f3;
+            list-style: none;
+        }
+
+        li:first-child {
+            margin-top: 0;
+        }
+
+        span {
+            padding: 10px 20px;
+        }
+        .btn-open {
+            padding: 10px 20px;
+            background: #999;
+        }
+
+        p {
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <buttonn class="btn-open">刷新</buttonn>
+        <ul class="ul">
+        </ul>
+    </div>
+
+    <script src="./jquery.js"></script>
+    <script>
+        $(function () {
+            $(".btn-open").on("click", function () {
+
+                var msg = "success";
+
+                $.ajax({
+                    url: "./liveList.json",
+
+                    type: "get",
+
+                    dataType: "json",
+
+                    success: function (res) {
+
+                        $.each(res.data.items, function (index, item) {
+
+                            var li = $("<li>").appendTo(".ul");
+
+                            $.each(item, function (key, value) {
+
+                                var p = $("<p>").appendTo(li);
+                                $("<span>").appendTo(p).text(key);
+                                $("<span>").appendTo(p).text(value);
+
+                            });
+                        })
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
