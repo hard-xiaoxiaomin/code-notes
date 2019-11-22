@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>加载转动</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                padding: 200px 0;
+            }
+
+            .cirqueBox {
+                margin: 0 auto;
+                position: relative;
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                -webkit-mask: radial-gradient(transparent, transparent 60px, #000 0);
+                mask: radial-gradient(transparent 60px, #000 0);
+            }
+
+            .cirqueBox::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: #e31514;
+                z-index: 1;
+            }
+
+            .cirqueBox::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: #aaa;
+                z-index: 2;
+                animation: mymove 1.5s linear infinite;
+            }
+
+            @keyframes mymove {
+                0% {
+                    clip-path: polygon(70px 70px, 70px -300px, -300px 70px, 70px 440px, 440px 70px, 70px -300px);
+                }
+
+                25% {
+                    clip-path: polygon(70px 70px, 70px -300px, -300px 70px, 70px 440px, 440px 70px, 440px 70px);
+                }
+
+                50% {
+                    clip-path: polygon(70px 70px, 70px -300px, -300px 70px, 70px 440px, 70px 440px, 70px 440px);
+                }
+
+                75% {
+                    clip-path: polygon(70px 70px, 70px -300px, -300px 70px, -300px 70px, -300px 70px, -300px 70px);
+                }
+
+                100% {
+                    clip-path: polygon(70px 70px, 70px -300px, 70px -300px, 70px -300px, 70px -300px, 70px -300px);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="cirqueBox"></div>
+    </body>
+
+</html>
