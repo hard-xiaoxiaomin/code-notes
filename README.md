@@ -20,3 +20,4 @@
 - [ajax](https://hard-xiaoxiaomin.github.io/code-notes/javascript/ajax/html/demo.html)
 - [arguments](https://hard-xiaoxiaomin.github.io/code-notes/javascript/arguments/html/arguments练习.html)
 - [双击放大](https://hard-xiaoxiaomin.github.io/code-notes/javascript/双击放大/html/双击放大.html)
+- [遍历ajax](https://hard-xiaoxiaomin.github.io/code-notes/javascript/遍历ajax/html/遍历.html)
