@@ -5,6 +5,8 @@
 - [flex布局width](https://hard-xiaoxiaomin.github.io/code-notes/css/flex布局width.html)
 - [等分](https://hard-xiaoxiaomin.github.io/code-notes/css/等分.html)
 - [上下左右进入](https://hard-xiaoxiaomin.github.io/code-notes/css/上下左右.html)
+- [empty](https://hard-xiaoxiaomin.github.io/code-notes/css/empty.html)
+- [加载圆圈](https://hard-xiaoxiaomin.github.io/code-notes/css/加载圆圈.html)
 
 
 ## javascript
@@ -15,4 +17,6 @@
 - [回到顶部](https://hard-xiaoxiaomin.github.io/code-notes/javascript/回到顶部/html/html.html)
 - [定时器学习](https://hard-xiaoxiaomin.github.io/code-notes/javascript/定时器学习/demo1.html)
 - [选项卡](https://hard-xiaoxiaomin.github.io/code-notes/javascript/选项卡/1.html)
-- [ajaxdemo](https://hard-xiaoxiaomin.github.io/code-notes/javascript/ajaxdemo/html/demo.html)
+- [ajax](https://hard-xiaoxiaomin.github.io/code-notes/javascript/ajax/html/demo.html)
+- [arguments](https://hard-xiaoxiaomin.github.io/code-notes/javascript/arguments/html/arguments练习.html)
+- [双击放大](https://hard-xiaoxiaomin.github.io/code-notes/javascript/双击放大/html/双击放大.html)
