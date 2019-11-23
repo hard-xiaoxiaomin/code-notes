@@ -18,6 +18,6 @@
 - [定时器学习](https://hard-xiaoxiaomin.github.io/code-notes/javascript/定时器学习/demo1.html)
 - [选项卡](https://hard-xiaoxiaomin.github.io/code-notes/javascript/选项卡/1.html)
 - [ajax](https://hard-xiaoxiaomin.github.io/code-notes/javascript/ajax/html/demo.html)
-- [arguments](https://hard-xiaoxiaomin.github.io/code-notes/javascript/arguments/html/arguments练习.html)
-- [双击放大](https://hard-xiaoxiaomin.github.io/code-notes/javascript/双击放大/html/双击放大.html)
+- [arguments](https://hard-xiaoxiaomin.github.io/code-notes/javascript/arguments/arguments练习.html)
+- [双击放大](https://hard-xiaoxiaomin.github.io/code-notes/javascript/双击放大/双击放大.html)
 - [遍历ajax](https://hard-xiaoxiaomin.github.io/code-notes/javascript/遍历ajax/遍历.html)
