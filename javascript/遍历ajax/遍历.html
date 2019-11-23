@@ -13,9 +13,15 @@
             box-sizing: border-box;
         }
 
+        html,
+        body {
+            width: 100%;
+        }
+
         .box {
             padding: 100px;
         }
+
         .ul {
             margin-top: 10px;
         }
@@ -30,10 +36,7 @@
             margin-top: 0;
         }
 
-        span {
-            padding: 10px 20px;
-        }
-        .btn-open {
+        #btn-open {
             padding: 10px 20px;
             background: #999;
         }
@@ -41,48 +44,85 @@
         p {
             padding: 10px 0;
         }
+
+        .itemL {
+            display: inline-block;
+            width: 200px;
+        }
+
+        .tit-p {
+            vertical-align: middle;
+        }
+
+        .itemR {
+            display: inline-block;
+
+        }
     </style>
 </head>
 
 <body>
     <div class="box">
-        <buttonn class="btn-open">刷新</buttonn>
+        <buttonn id="btn-open">刷新</buttonn>
         <ul class="ul">
         </ul>
     </div>
 
     <script src="./jquery.js"></script>
     <script>
-        $(function () {
-            $(".btn-open").on("click", function () {
+        var btn = document.getElementById("btn-open");
 
-                var msg = "success";
+        btn.onclick = function () {
+            var msg = "success";
+            console.log(msg);
 
-                $.ajax({
-                    url: "./liveList.json",
+            $.ajax({
+                url: "./liveList.json",
 
-                    type: "get",
+                type: "get",
 
-                    dataType: "json",
+                dataType: "json",
 
-                    success: function (res) {
+                success: function (res) {
+                    var contentwrap = '';
+                    for (var i = 0; i < res.data.items.length; i++) {
+                        contentwrap += '<li>' +
+                            '<div class="itemL">' + '<p class="tit-p">' + i + '</p>' + '</div>' +
+                            '<div class="itemR">' +
+                            '<p>' + res.data.items[i].userinfoUri + '</p>' +
+                            '<p>' + res.data.items[i].appraisalStatus + '</p>' +
+                            '<p>' + res.data.items[i].viewerNum + '</p>' +
+                            '<p>' + res.data.items[i].username + '</p>' +
+                            '<p>' + res.data.items[i].weight + '</p>' +
+                            '<p>' + res.data.items[i].isMe + '</p>' +
+                            '<p>' + res.data.items[i].liveCover + '</p>' +
+                            '<p>' + res.data.items[i].liveCoverSmall + '</p>' +
+                            '<p>' + res.data.items[i].liveCoverPre + '</p>' +
+                            '<p>' + res.data.items[i].liveCoverPreSmall + '</p>' +
+                            '<p>' + res.data.items[i].sortStatus + '</p>' +
+                            '<p>' + res.data.items[i].preStartTime + '</p>' +
+                            '<p>' + res.data.items[i].preEndTime + '</p>' +
+                            '<p>' + res.data.items[i].buttonString + '</p>' +
+                            '<p>' + res.data.items[i].preEndTimeString + '</p>' +
+                            '<p>' + res.data.items[i].description + '</p>' +
+                            '<p>' + res.data.items[i].playUrl + '</p>' +
+                            '<p>' + res.data.items[i].playUrlH5 + '</p>' +
+                            '<p>' + res.data.items[i].playUrlFlv + '</p>' +
+                            '<p>' + res.data.items[i].accPlayUrl + '</p>' +
+                            '<p>' + res.data.items[i].appraisalStatusImg + '</p>' +
+                            '<p>' + res.data.items[i].image + '</p>' +
 
-                        $.each(res.data.items, function (index, item) {
+                            '</div>' +
+                            '</li>';
 
-                            var li = $("<li>").appendTo(".ul");
-
-                            $.each(item, function (key, value) {
-
-                                var p = $("<p>").appendTo(li);
-                                $("<span>").appendTo(p).text(key);
-                                $("<span>").appendTo(p).text(value);
-
-                            });
-                        })
+                        console.log(res.data.items[i].index);
                     }
-                });
+
+                    $('.ul').html(contentwrap);
+
+                }
             });
-        });
+        }
     </script>
 </body>
 
