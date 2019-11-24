@@ -18,63 +18,70 @@
             width: 100%;
         }
 
+        body {
+            padding: 100px 50px;
+        }
         .box {
-            padding: 100px;
+            padding: 10px;
+            background: #f3f3f3;
+        }
+        #ul {
+            padding: 20px;
+        }
+        #btn-open {
+            padding: 10px 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: #999;
         }
 
-        .ul {
-            margin-top: 10px;
+        #btn-open:active {
+            opacity: .8;
+        }
+
+        .itemL {
+            width: 300px;
+            float: left;
+        }
+
+        .itemR {
+            width: 100%;
         }
 
         li {
             margin-top: 20px;
-            background: #f3f3f3;
+            padding: 10px 20px;
+            background: #999;
             list-style: none;
-        }
-
+        } 
+        
         li:first-child {
             margin-top: 0;
         }
 
-        #btn-open {
-            padding: 10px 20px;
-            background: #999;
-        }
-
-        p {
-            padding: 10px 0;
-        }
-
-        .itemL {
-            display: inline-block;
-            width: 200px;
-        }
-
-        .tit-p {
-            vertical-align: middle;
-        }
-
-        .itemR {
-            display: inline-block;
-
+        .clearfix::after {
+            display: block;
+            visibility: hidden;
+            height: 0;
+            clear: both;
         }
     </style>
 </head>
 
 <body>
-    <div class="box">
+    <div class="box clearfix">
         <buttonn id="btn-open">刷新</buttonn>
-        <ul class="ul">
+        <ul id="ul">
         </ul>
     </div>
 
     <script src="./jquery.js"></script>
     <script>
         var btn = document.getElementById("btn-open");
+        var ul = document.getElementById("ul");
 
         btn.onclick = function () {
-            var msg = "success";
-            console.log(msg);
+           
 
             $.ajax({
                 url: "./liveList.json",
@@ -85,41 +92,26 @@
 
                 success: function (res) {
                     var contentwrap = '';
+
                     for (var i = 0; i < res.data.items.length; i++) {
-                        contentwrap += '<li>' +
-                            '<div class="itemL">' + '<p class="tit-p">' + i + '</p>' + '</div>' +
-                            '<div class="itemR">' +
-                            '<p>' + res.data.items[i].userinfoUri + '</p>' +
-                            '<p>' + res.data.items[i].appraisalStatus + '</p>' +
-                            '<p>' + res.data.items[i].viewerNum + '</p>' +
-                            '<p>' + res.data.items[i].username + '</p>' +
-                            '<p>' + res.data.items[i].weight + '</p>' +
-                            '<p>' + res.data.items[i].isMe + '</p>' +
-                            '<p>' + res.data.items[i].liveCover + '</p>' +
-                            '<p>' + res.data.items[i].liveCoverSmall + '</p>' +
-                            '<p>' + res.data.items[i].liveCoverPre + '</p>' +
-                            '<p>' + res.data.items[i].liveCoverPreSmall + '</p>' +
-                            '<p>' + res.data.items[i].sortStatus + '</p>' +
-                            '<p>' + res.data.items[i].preStartTime + '</p>' +
-                            '<p>' + res.data.items[i].preEndTime + '</p>' +
-                            '<p>' + res.data.items[i].buttonString + '</p>' +
-                            '<p>' + res.data.items[i].preEndTimeString + '</p>' +
-                            '<p>' + res.data.items[i].description + '</p>' +
-                            '<p>' + res.data.items[i].playUrl + '</p>' +
-                            '<p>' + res.data.items[i].playUrlH5 + '</p>' +
-                            '<p>' + res.data.items[i].playUrlFlv + '</p>' +
-                            '<p>' + res.data.items[i].accPlayUrl + '</p>' +
-                            '<p>' + res.data.items[i].appraisalStatusImg + '</p>' +
-                            '<p>' + res.data.items[i].image + '</p>' +
 
-                            '</div>' +
-                            '</li>';
+                        for (var key in res.data.items[i]) {
+                           
+                            contentwrap += 
+                                '<li>' +
+                                    '<div class="itemL">' + 
+                                        '<p class="tit-p">' + key + '</p>' + 
+                                    '</div>' +
 
-                        console.log(res.data.items[i].index);
+                                    '<div class="itemR">' +
+                                        '<p>' + res.data.items[i][key] + '</p>' +
+                                    '</div>' +
+
+                                '</li>';
+                        }
                     }
 
-                    $('.ul').html(contentwrap);
-
+                    ul.innerHTML = contentwrap;
                 }
             });
         }
