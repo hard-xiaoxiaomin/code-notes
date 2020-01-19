@@ -34,3 +34,15 @@ js.
 
 
 */
+
+.ball_style {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background: #333;
+    border-radius:  50%;
+    opacity: 1;
+}
+.ball_style:active, .ball_style:hover, .ball_style:focus {
+    opacity: .5;
+}
