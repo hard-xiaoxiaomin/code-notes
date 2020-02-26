@@ -22,6 +22,8 @@
 - [arguments](https://hard-xiaoxiaomin.github.io/code-notes/javascript/arguments/arguments练习.html)
 - [双击放大](https://hard-xiaoxiaomin.github.io/code-notes/javascript/双击放大/双击放大.html)
 - [遍历ajax](https://hard-xiaoxiaomin.github.io/code-notes/javascript/遍历ajax/遍历.html)
+- [冒泡方式-点击事件](https://hard-xiaoxiaomin.github.io/code-notes/javascript/冒泡方式-点击事件/html/demo.html)
+
 
 
 
