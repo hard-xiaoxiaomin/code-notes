@@ -230,7 +230,7 @@
                     if ($(".content-wrap").eq(i).hasClass("fold")) {
                         $(".content-wrap").eq(i).addClass("fold").siblings().removeClass("fold");
                     } else {
-                        $(".content-wrap").eq(i).removeClass("fold");
+                        $(".content-wrap").eq(i).removeClass("fold").siblings().removeClass("fold");;
                     }
                     console.log("jjj");
                     event.stopPropagation();
