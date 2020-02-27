@@ -32,25 +32,39 @@ html, body {
     zoom: 1;
 }
 
+@mixin texthidden {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .page-show {
-    padding:10px;
-    margin-top: -30px;
+    @include clearfix;
+    padding: 0 5px;
     box-sizing: border-box;
     user-select: none;
 
-    .wrap {
-        width: 100%;
+    .list-side {
+        padding: 0 5px 5px 5px;
+        float: left;
+        width: 50%;
+        background: #fff;
     }
     
 
     .content-wrap {
         @include clearfix;
-        margin-top: 30px;
+        margin-top: 10px;
         padding: 10px 25px;
-        float: left;
-        width: 50%;
+        width: 100%;
+        box-shadow: 0 0 0 1px rgba(27, 27, 78, 0.1);
+        transition: all 3s;
 
         &.fold {
+            .more-icon {
+                color: #fff;
+                background: #1E90FF;
+            }
             .more-hide {
                 display: block;
             }
@@ -59,11 +73,12 @@ html, body {
 
     dt {
         @include clearfix;
+        position: relative;
 
         &::before {
             content: "";
             position: absolute;
-            top: 0px;
+            top: 0;
             bottom: 0;
             left: -10px;
             width: 4px;
@@ -71,42 +86,47 @@ html, body {
         }
 
         .tit {
-          
             float: left;
             vertical-align: middle;
         }
+
         .btn-wrap {
             float: right;
             position: relative;
         }
+        
         .more-icon{
             display: block;
             font-size: 24px;
             outline: none;
             border: none;
+            border-radius: 5px;
+            color: #666;
             background: transparent;
             cursor: pointer;
+            transition: all .1s;
 
             &:active {
+                color: #fff;
                 background: #1E90FF;
             }
          }
          .more-hide {
-             
              display: none;
              position: absolute;
              top: 30px;
              right: 10px;
              width: 80px;
              box-shadow: 1px 1px 3px 1px rgba(27, 27, 78, 0.5);
-             transition: all 3s;
              background: #fff;
 
              p {
                  padding: 5px 10px;
                  font-size: 14px;
+                 transition: all .1s;
 
                  &:active {
+                     color: #fff;
                      background: #1E90FF;
                  }
              }
@@ -119,20 +139,20 @@ html, body {
         border-bottom: 2px dashed #ccc;
 
         .content-info {
+            @include texthidden;
+            width: 60%;
             float: left;
-
-
         }
 
         .user-name {
             float: left;
+            text-align: center;
         }
 
-        .time {
+        time {
+            display: block;
             float: right;
+            color: #999;
         }
     }
-
-
-
 }
