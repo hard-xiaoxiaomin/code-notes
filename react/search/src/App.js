@@ -9,19 +9,32 @@ class App extends Component {
         super(props);
         this.state = {
             inputValue : '',
-            list : [],
+            list: []
         }
     }
     onChange (event) {
         console.log(111)
-        this.setState ={
-            inputValue : event.target.value
-        }
-        console.log(this.state.inputValue)
+        this.setState({
+            inputValue :event.target.value
+        })
+    }
+    closeInput (event) {
+        this.setState({
+            inputValue : ''
+        })
+    }
+    handleIn () {
+        var item = this.state.inputValue
+        this.setState({
+            list: [item, ...this.state.list]
+        })
     }
     render() {
         const icon = (
-            <i className="iconfont">&#xe651;</i>
+            <i 
+                className="iconfont close-btn"
+                onClick={this.closeInput.bind(this)}
+            >&#xe651;</i>
         )
         
         return (
@@ -34,7 +47,15 @@ class App extends Component {
                         value={this.state.inputValue}
                         onChange = {this.onChange.bind(this)}
                     />
-                    {icon}
+                    {(this.state.inputValue !== "") && icon}
+                </div>
+                <button onClick={this.handleIn.bind(this)}>添加</button>
+                <div className="content-wrap">
+                    {
+                        this.state.list.map((i, index) => {
+                            <p>{i}</p>
+                        })
+                    }
                 </div>
             </div>
         );

@@ -8,6 +8,7 @@
     padding: 10px;
 
     .search-item {
+        position: relative;
         padding: 5px 10px;
         border: 1px solid #eee;
         border-radius: 4px;
@@ -17,5 +18,12 @@
             border: none;
             outline: none;
         }
+        .close-btn {
+            position: absolute;
+            top: 50%; right: 5px;
+            font-size: 18px;
+            transform: translate(0,-50%);
+        }
+
     }
 }
