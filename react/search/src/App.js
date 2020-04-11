@@ -9,32 +9,41 @@ class App extends Component {
         super(props);
         this.state = {
             inputValue : '',
-            list: []
+            list: JSON.parse(localStorage.getItem('list')) || [],
         }
     }
+   //监听输入框的值
     onChange (event) {
-        console.log(111)
         this.setState({
             inputValue :event.target.value
         })
     }
+    //判断输入框后清空按钮
     closeInput (event) {
         this.setState({
             inputValue : ''
         })
     }
+    //提交按钮
     handleIn () {
-        var item = this.state.inputValue
+        this.state.list.push(this.state.inputValue)
+    
+        localStorage.setItem('list',JSON.stringify(this.state.list));
+
         this.setState({
-            list: [item, ...this.state.list]
+            inputValue : '',
         })
+
     }
+    
     render() {
         const icon = (
             <i 
                 className="iconfont close-btn"
                 onClick={this.closeInput.bind(this)}
-            >&#xe651;</i>
+            >
+                &#xe651;
+            </i>
         )
         
         return (
@@ -53,7 +62,9 @@ class App extends Component {
                 <div className="content-wrap">
                     {
                         this.state.list.map((i, index) => {
-                            <p>{i}</p>
+                            return (
+                                <p key={index}>{i}</p>
+                            )
                         })
                     }
                 </div>
