@@ -3,9 +3,10 @@ import './app.scss';
 
 export default class App extends Component {
     state = {
-        list:[1, 2, 3,4, 5,6],
+        list:[1, 2, 3, 4],
         isjishu: false,
         list1: [],
+
         isShowBtn: true
     }
     componentDidMount() {

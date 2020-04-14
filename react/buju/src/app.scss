@@ -6,21 +6,9 @@
 }
 
 .jishuWrap {
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
-
-    .itemWrap {
-        width: 0;
-        flex-basis: 50%;
-        height: 200px;
-        padding: 10px;
-        text-align: center;
-        border: 1px solid #eee;
-    }
-
-    .itemCon {
-        width: 100%;
-    }
 
     &.isTrue {
         .itemWrap {
@@ -29,10 +17,22 @@
         }
         }
     }  
+    .itemWrap {
+        margin: 10px;
+        width: 0;
+        flex-basis: calc(50% - 20px);;
+        height: 200px;
+        text-align: center;
+        border: 1px solid #eee;
+    }
+    .itemCon {
+        width: 100%;
+    }
 }
 .btn-wrap {
     margin-top: 20px;
     text-align: center;
+    
     .btn-fold {
         padding: 10px 20px;
         border: none;
