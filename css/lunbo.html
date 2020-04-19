@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            .wrap {
+                margin-top: 200px;
+                width: 350px;
+                height: 50px;
+                border: 1px solid #eee;
+                overflow: hidden;
+            }
+
+            .item-ul {
+                height: 200px;
+                line-height: 50px;
+                position: relative;
+                transition: all 2s;
+                animation: shangxialunbo 9s infinite;
+            }
+
+            .item-ul li {
+                width: 300px;
+                height: 50px;
+                list-style: none;
+                text-align: center;
+            }
+
+            @keyframes shangxialunbo {
+                0% {
+                    transform: translatey(0px);
+                }
+
+                10% {
+                    transform: translatey(-50px);
+                }
+
+                33% {
+                    transform: translatey(-50px);
+                }
+
+                42% {
+                    transform: translateY(-100px);
+                }
+
+                67% {
+                    transform: translateY(-100px);
+                }
+
+                76% {
+                    transform: translateY(-150px);
+                }
+
+                100% {
+                    transform: translateY(-150px);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <ul class="item-ul">
+                <li>这是第一个</li>
+                <li>这是第二个</li>
+                <li>这是第三个</li>
+                <li>这是第四个</li>
+            </ul>
+        </div>
+
+    </body>
+
+</html>
